@@ -2,10 +2,7 @@
 #ifndef REGEC_REGEC_H
 #define REGEC_REGEC_H
 
-typedef struct {
-    const char *start;
-    const char *end;
-} str_t;
+#include "regec/string.h"
 
 /**
  * Match the given pattern against the given text.
@@ -15,6 +12,6 @@ typedef struct {
  * @result[out] result struct
  * @return 0 on success.
  */
-int match(str_t *pattern, str_t *text, str_t *result);
+int regec_match(regec_str_t *pattern, regec_str_t *text, regec_str_t *result);
 
 #endif // REGEC_REGEC_H
